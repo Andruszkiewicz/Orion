@@ -1,34 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Orion.Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * klasa Level której obiektami są trzy dostępne poziomy gry
  * @author karolinaandruszkiewicz
  */
 public class Level {
+    /**lista cykli w danym poziomie*/
     public List<Cycle> cycles; 
+    /**indeks cyklu w liście cykli */
     public int currentCycle; 
+    /**ikona poziomu*/
+    public String icon; 
     
+    /**
+     * konstruktor poziomu
+     */
     Level(){
-        Cycle first = new Cycle();
-        
         this.cycles = new ArrayList<Cycle>();
-        
-        this.cycles.add(first);
-        currentCycle=0; 
-        
-        
+        currentCycle=0;     
     }
-    
-    public Cycle getCurrentCycle() {
+    /**
+     * funkcja pobierająca i zwracająca obecny cykl 
+     * @return 
+     */
+    public Cycle getCurrentCycle() { 
         return this.cycles.get(currentCycle);
     }
+
     
 }
